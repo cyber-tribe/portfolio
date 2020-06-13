@@ -61,7 +61,7 @@ export default {
      */
     extend(config, ctx) {}
   },
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost/portfolio:3000'
+  router: {
+    base: '/portfolio/'
   }
 }
