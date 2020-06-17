@@ -6,7 +6,7 @@ float tree_startx;
 float tree_scale;
  
 void setup() {
-  size(innerWidth,innerHeight);
+  size(1500,innerHeight);
   background(255,255,255,0);
   tree_step = random(2,8);
   tree_angle = 30;
@@ -19,7 +19,7 @@ void setup() {
 }
  
 void draw() {
-  size(innerWidth,innerHeight);
+  size(1500,innerHeight);
   newTree();
   noLoop();
 }
