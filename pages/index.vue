@@ -1,44 +1,48 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        portfolio
-      </h1>
-      <h2 class="subtitle">
-        My well-made Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div id="app">
+    <div class="container"></div>
+    <canvas
+      v-for="i in 12"
+      ref="tree"
+      :key="i"
+      data-processing-sources="pde/tree.pde"
+    ></canvas>
+    <canvas data-processing-sources="pde/giraffe.pde"></canvas>
   </div>
 </template>
-
 <script>
-import Logo from '~/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
+  components: {},
+  mounted() {},
+  head() {
+    return {
+      script: [{ src: 'script/processing.min.js' }]
+    }
   }
 }
 </script>
 
 <style>
+body {
+  background: linear-gradient(
+    to top,
+    rgb(50, 30, 15),
+    #f89174 30%,
+    #ffc778 60%,
+    #cca166 85%,
+    #644e2f
+  );
+}
+canvas {
+  position: absolute;
+  background-color: transparent;
+}
 .container {
+  position: absolute;
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -64,5 +68,11 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+.tabs {
+  position: absolute;
+  width: 100vw;
+  height: 10vh;
+  background-color: beige;
 }
 </style>

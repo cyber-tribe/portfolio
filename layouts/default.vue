@@ -15,6 +15,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 *,
@@ -24,6 +26,15 @@ html {
   margin: 0;
 }
 
+canvas {
+  outline: none;
+  background-color: transparent;
+}
+
+body {
+  widows: 100%;
+  height: 100%;
+}
 .button--green {
   display: inline-block;
   border-radius: 4px;
